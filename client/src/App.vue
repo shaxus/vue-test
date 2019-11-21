@@ -7,7 +7,24 @@
 
 <script>
 export default {
-  name: 'App'
+  name: 'App',
+  mounted() {
+    if (this._isMobile()) {
+      // alert('手机端');
+      // 移动端首页路由
+      // this.$router.replace('/homeAndroid');
+    }else {
+      // alert('pc端');
+      // pc端首页路由
+      // this.$router.replace('/Home');
+    }
+  },
+  methods: {
+    _isMobile(){
+      let flag = navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)
+      return flag;
+    }
+  }
 }
 </script>
 
