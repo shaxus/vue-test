@@ -17,7 +17,8 @@
 <script>
   import Per from '../utils/performance/index.js';
   import Screen from '../utils/h5-screen-orientation.js'
-  Screen.lock({mode});
+  import detectOrient from '../utils/detectOrient.js'
+  const xScreen = new Screen();
 export default {
   name: 'HelloWorld',
   data () {
@@ -26,13 +27,39 @@ export default {
       msg: 'Welcome to Your Vue.js App'
     }
   },
+  beforeCreate() {
+    detectOrient();
+    window.addEventListener('resize',detectOrient);
+  },
+  created() {
+
+  },
   components:{
     // Button,
     // Select
   },
   mounted() {
     Per.getPerformanceTiming();
+    // detectOrient();
+    // window.addEventListener('resize',detectOrient);
+    // 强制竖屏
+    // xScreen.lock({
+    //   mode: 'portrait',
+    //   $wrapper: document.getElementById('J_portrait'),
+    //   zIndex: 302,
+    // });
 
+    // xScreen.inform({
+    //   mode: 'landscape',
+    //   id: 'J_landscapeTips',
+    // })
+    // 竖屏提醒
+    // xScreen.inform({
+    //   mode: 'portrait',
+    //   id: 'J_portraitTips',
+    //   text: '竖屏浏览体验更好喔！',
+    //   logo: './img/portrait_logo.png',
+    // })
   }
 }
 </script>
