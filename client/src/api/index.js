@@ -16,9 +16,9 @@ export default {
         })
       })
     },
-    uploadFile(url) {
+    uploadFile(url,config) {
       return new Promise((resolve,reject) => {
-        Vue.axios.post(url).then((response) => {
+        Vue.axios.post(url,{},config).then((response) => {
           resolve(response);
         })
       })
