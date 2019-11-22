@@ -1,5 +1,4 @@
-<template>
-<<<<<<< HEAD
+﻿<template>
   <div class="hello">
     <!--<mt-button type="default">default</mt-button>-->
     <!--<mt-button type="primary">primary</mt-button>-->
@@ -12,7 +11,6 @@
       <el-button type="warning" disabled>警告按钮</el-button>
       <el-button type="danger" disabled>危险按钮</el-button>
     </el-row>
-=======
   <div class="hello" v-loading="loading">
     <div v-if="show">
         <div>你好</div>
@@ -30,33 +28,27 @@
       <el-button size="small" type="primary" @click="uploadFile">点击上传</el-button>
       <div slot="tip" class="el-upload__tip">只能上传jpg/png文件，且不超过500kb</div>
     </el-upload>
->>>>>>> 886d5e58598e7df8a8d21bd432934bc094ac0d5b
   </div>
 </template>
 
 <script>
   import Per from '../utils/performance/index.js';
-<<<<<<< HEAD
   import Screen from '../utils/h5-screen-orientation.js'
   import detectOrient from '../utils/detectOrient.js'
   const xScreen = new Screen();
-=======
   import Api from '../api/index';
   // import Screen from '../utils/h5-screen-orientation.js'
->>>>>>> 886d5e58598e7df8a8d21bd432934bc094ac0d5b
 export default {
   name: 'HelloWorld',
   data () {
     return {
       mode: "portrait",
-<<<<<<< HEAD
       msg: 'Welcome to Your Vue.js App'
     }
   },
   beforeCreate() {
     detectOrient();
     window.addEventListener('resize',detectOrient);
-=======
       msg: 'Welcome to Your Vue.js App',
       show: false,
      loading: true,
@@ -73,7 +65,6 @@ export default {
   },
   beforeCreate() {
 
->>>>>>> 886d5e58598e7df8a8d21bd432934bc094ac0d5b
   },
   created() {
 
@@ -84,7 +75,6 @@ export default {
   },
   mounted() {
     Per.getPerformanceTiming();
-<<<<<<< HEAD
     // detectOrient();
     // window.addEventListener('resize',detectOrient);
     // 强制竖屏
@@ -105,7 +95,6 @@ export default {
     //   text: '竖屏浏览体验更好喔！',
     //   logo: './img/portrait_logo.png',
     // })
-=======
     this.loading = false;
 
     // Api.checkRes(this.$data.user).then(function (res) {
@@ -144,7 +133,7 @@ export default {
   },
   watch:{
 
->>>>>>> 886d5e58598e7df8a8d21bd432934bc094ac0d5b
+
   }
 }
 </script>
@@ -152,13 +141,12 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
   .hello {
-<<<<<<< HEAD
+
     width: 150px;
     height: 64px; /*px*/
     font-size: 28px; /*px*/
     border: 1px solid #ddd; /*no*/
   }
-=======
     width: 200px;
     height: 100px; /*px*/
     font-size: 28px; /*px*/
@@ -189,5 +177,4 @@ export default {
     height: 178px;
     display: block;
   }
->>>>>>> 886d5e58598e7df8a8d21bd432934bc094ac0d5b
 </style>
