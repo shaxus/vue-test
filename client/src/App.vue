@@ -1,8 +1,6 @@
 <template>
   <div id="app">
-<<<<<<< HEAD
     <img src="./assets/logo.png">
-=======
     <!--<img src="./assets/logo.png">-->
     <el-button
       type="primary"
@@ -15,7 +13,6 @@
       @click="openFullScreen">
       服务方式
     </el-button>
->>>>>>> 886d5e58598e7df8a8d21bd432934bc094ac0d5b
     <router-view/>
   </div>
 </template>
@@ -23,9 +20,6 @@
 <script>
 export default {
   name: 'App',
-<<<<<<< HEAD
-  mounted() {
-=======
   data(){
     return {
       loading: true,
@@ -35,25 +29,10 @@ export default {
   created() {
     // this.openFullScreen();
   },
-  mounted() {
-    // this.loading = false;
->>>>>>> 886d5e58598e7df8a8d21bd432934bc094ac0d5b
-    if (this._isMobile()) {
-      // alert('手机端');
-      // 移动端首页路由
-      // this.$router.replace('/homeAndroid');
-    }else {
-      // alert('pc端');
-      // pc端首页路由
-      // this.$router.replace('/Home');
-    }
-  },
   methods: {
     _isMobile(){
       let flag = navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)
       return flag;
-<<<<<<< HEAD
-=======
     },
     openFullScreen() {
       this.fullscreenLoading = true;
@@ -71,7 +50,6 @@ export default {
       setTimeout(() => {
         loading.close();
       }, 2000);
->>>>>>> 886d5e58598e7df8a8d21bd432934bc094ac0d5b
     }
   }
 }

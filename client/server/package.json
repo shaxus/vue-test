@@ -13,11 +13,8 @@
     "jade": "~1.11.0",
     "mongoose": "^5.7.12",
     "morgan": "~1.9.1"
-<<<<<<< HEAD
-=======
   },
   "devDependencies": {
     "multer": "^1.4.2"
->>>>>>> 886d5e58598e7df8a8d21bd432934bc094ac0d5b
   }
 }
