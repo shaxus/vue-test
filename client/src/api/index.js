@@ -16,9 +16,12 @@ export default {
         })
       })
     },
-    uploadFile(url,config) {
+    uploadFile() {
       return new Promise((resolve,reject) => {
-        Vue.axios.post(url,{},config).then((response) => {
+        Vue.axios.post('http://localhost:3000/api/upload',{},{ headers: {
+            // Accept: "application/json",
+            // "Content-Type": "multipart/form-data"
+          }}).then((response) => {
           resolve(response);
         })
       })
