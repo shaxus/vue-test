@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <img src="./assets/logo.png">
     <!--<img src="./assets/logo.png">-->
     <el-button
       type="primary"
@@ -27,18 +28,6 @@ export default {
   },
   created() {
     // this.openFullScreen();
-  },
-  mounted() {
-    // this.loading = false;
-    if (this._isMobile()) {
-      // alert('手机端');
-      // 移动端首页路由
-      // this.$router.replace('/homeAndroid');
-    }else {
-      // alert('pc端');
-      // pc端首页路由
-      // this.$router.replace('/Home');
-    }
   },
   methods: {
     _isMobile(){

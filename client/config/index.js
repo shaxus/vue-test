@@ -13,11 +13,16 @@ module.exports = {
     proxyTable: {
       '/api': {
         target: 'http://localhost:3000',
-        changeOrigin: true
+        changeOrigin: true,
+		    pathRewrite: {
+          '^/api': ''
+        }
+
       }
     },
 
     // Various Dev Server settings
+    host: '192.168.3.28', // can be overwritten by process.env.HOST
     host: 'localhost', // can be overwritten by process.env.HOST
     port: 8080, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
     autoOpenBrowser: true,
