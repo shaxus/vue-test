@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7508c5f5-066d-4c0d-9a68-b49b4ac37cb6" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/server/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/server/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/server/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/server/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/server/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/server/routes/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/server/routes/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/server/routes/users.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/HelloWorld.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/HelloWorld.vue" afterDir="false" />
-    </list>
+    <list default="true" id="7508c5f5-066d-4c0d-9a68-b49b4ac37cb6" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -75,8 +68,8 @@
       <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/client/server/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="21" column="4" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
+            <state relative-caret-position="75">
+              <caret line="6" column="42" lean-forward="true" selection-start-line="6" selection-start-column="42" selection-end-line="6" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -289,26 +282,25 @@
       <workItem from="1574387307829" duration="35000" />
       <workItem from="1574387353414" duration="3101000" />
       <workItem from="1574391825294" duration="113000" />
-      <workItem from="1574405940819" duration="9725000" />
+      <workItem from="1574405940819" duration="10164000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37040000" />
+    <option name="totallyTimeSpent" value="37479000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TypeScript" order="0" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18020834" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18020834" />
       <window_info anchor="bottom" id="TODO" order="7" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Run" order="3" />
       <window_info anchor="bottom" id="Version Control" order="11" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.464656" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.464656" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -660,8 +652,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client/server/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="21" column="4" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
+        <state relative-caret-position="75">
+          <caret line="6" column="42" lean-forward="true" selection-start-line="6" selection-start-column="42" selection-end-line="6" selection-end-column="42" />
         </state>
       </provider>
     </entry>
