@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
+    <list default="true" id="7508c5f5-066d-4c0d-9a68-b49b4ac37cb6" name="Default" comment="" />
+=======
     <list default="true" id="49ce807a-28e8-43fe-8126-26c73000cc77" name="Default" comment="add for">
       <change afterPath="$PROJECT_DIR$/client/server/middleware/checkToken.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/client/server/middleware/createToken.js" afterDir="false" />
@@ -17,6 +20,7 @@
       <change beforePath="$PROJECT_DIR$/client/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/router/index.js" afterDir="false" />
     </list>
+>>>>>>> 477162190c7a8c35f09d837e8c49941e10433f7e
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -96,8 +100,18 @@
       <file leaf-file-name="mutations.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/src/store/mutations.js">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="182">
               <caret line="7" column="29" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="29" />
+=======
+<<<<<<< HEAD
+            <state relative-caret-position="75">
+              <caret line="6" column="42" lean-forward="true" selection-start-line="6" selection-start-column="42" selection-end-line="6" selection-end-column="42" />
+=======
+            <state relative-caret-position="200">
+              <caret line="23" column="13" lean-forward="true" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+>>>>>>> 477162190c7a8c35f09d837e8c49941e10433f7e
+>>>>>>> 5bafbf54c5c47c5a9ec9206f94b1c26d97cf6dd8
             </state>
           </provider>
         </entry>
@@ -339,6 +353,17 @@
       <created>1574425252458</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
+<<<<<<< HEAD
+      <updated>1574228082553</updated>
+      <workItem from="1574228084615" duration="1350000" />
+      <workItem from="1574229446240" duration="8773000" />
+      <workItem from="1574312939044" duration="1351000" />
+      <workItem from="1574315994070" duration="12592000" />
+      <workItem from="1574387307829" duration="35000" />
+      <workItem from="1574387353414" duration="3101000" />
+      <workItem from="1574391825294" duration="113000" />
+      <workItem from="1574405940819" duration="10164000" />
+=======
       <updated>1574425252458</updated>
       <workItem from="1574425257298" duration="786000" />
       <workItem from="1574426882226" duration="194000" />
@@ -347,6 +372,7 @@
       <workItem from="1574429116671" duration="341000" />
       <workItem from="1574429497647" duration="880000" />
       <workItem from="1574432694861" duration="487000" />
+<<<<<<< HEAD
       <workItem from="1574433680082" duration="2710000" />
       <workItem from="1574599472446" duration="8060000" />
       <workItem from="1574681755110" duration="2853000" />
@@ -363,10 +389,15 @@
       <workItem from="1575726561916" duration="3405000" />
       <workItem from="1575803925613" duration="2548000" />
       <workItem from="1575807953456" duration="9216000" />
+=======
+      <workItem from="1574433680082" duration="2587000" />
+>>>>>>> 477162190c7a8c35f09d837e8c49941e10433f7e
+>>>>>>> 5bafbf54c5c47c5a9ec9206f94b1c26d97cf6dd8
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="69584000" />
   </component>
   <component name="TodoView">
@@ -377,6 +408,26 @@
       <are-packages-shown value="true" />
       <is-autoscroll-to-source value="true" />
     </todo-panel>
+=======
+<<<<<<< HEAD
+    <option name="totallyTimeSpent" value="37479000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
+    <layout>
+      <window_info anchor="bottom" id="TypeScript" order="0" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18020834" />
+      <window_info anchor="bottom" id="TODO" order="7" />
+      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Run" order="3" />
+      <window_info anchor="bottom" id="Version Control" order="11" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.464656" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
+=======
+    <option name="totallyTimeSpent" value="5775000" />
+>>>>>>> 5bafbf54c5c47c5a9ec9206f94b1c26d97cf6dd8
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -388,7 +439,12 @@
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32952926" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+<<<<<<< HEAD
       <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.30527818" />
+=======
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.20684735" />
+>>>>>>> 477162190c7a8c35f09d837e8c49941e10433f7e
+>>>>>>> 5bafbf54c5c47c5a9ec9206f94b1c26d97cf6dd8
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -787,5 +843,29 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/client/server/src/utils/multer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="1" column="31" lean-forward="true" selection-start-line="1" selection-start-column="31" selection-end-line="1" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/api/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="21" column="28" lean-forward="true" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/server/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="6" column="42" lean-forward="true" selection-start-line="6" selection-start-column="42" selection-end-line="6" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+=======
+>>>>>>> 477162190c7a8c35f09d837e8c49941e10433f7e
   </component>
 </project>
