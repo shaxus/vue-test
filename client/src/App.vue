@@ -1,18 +1,18 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
     <!--<img src="./assets/logo.png">-->
-    <el-button
-      type="primary"
-      @click="openFullScreen"
-      v-loading.fullscreen.lock="fullscreenLoading">
-      指令方式
-    </el-button>
-    <el-button
-      type="primary"
-      @click="openFullScreen">
-      服务方式
-    </el-button>
+    <!--&lt;!&ndash;<img src="./assets/logo.png">&ndash;&gt;-->
+    <!--<el-button-->
+      <!--type="primary"-->
+      <!--@click="openFullScreen"-->
+      <!--v-loading.fullscreen.lock="fullscreenLoading">-->
+      <!--指令方式-->
+    <!--</el-button>-->
+    <!--<el-button-->
+      <!--type="primary"-->
+      <!--@click="openFullScreen">-->
+      <!--服务方式-->
+    <!--</el-button>-->
     <router-view/>
   </div>
 </template>

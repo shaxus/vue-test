@@ -1,67 +1,77 @@
 ﻿<template>
   <div class="hello">
-    <!--<mt-button type="default">default</mt-button>-->
-    <!--<mt-button type="primary">primary</mt-button>-->
-    <!--<mt-button type="danger">danger</mt-button>-->
-  <div class="hello" v-loading="loading">
-    <div v-if="show">
-        <div>你好</div>
-    </div>
-    <el-upload
-      class="upload-demo"
-      drag
-      multiple
-      ref="upload"
-      action="string"
-      :before-upload="onBeforeUploadImage"
-      :http-request="UploadImage"
-      :file-list="fileList">
-      <i class="el-icon-upload"></i>
-      <div class="el-upload__text">将文件拖到此处，或<em>点击上传</em></div>
-      <div class="el-upload__tip" slot="tip">只能上传rvt</div>
-    </el-upload>
-  </div>
+  <!--<Input class="" v-loading="loading">-->
+    <!--<div v-if="show">-->
+        <!--<div>你好</div>-->
+    <!--</div>-->
+    <!--<LoginPw v-bind="user">-->
+      <!--register-->
+    <!--</LoginPw>-->
+    <!--<Check ref="Check1">-->
+      <!--<template #header>-->
+        <!--<h1>nihao</h1>-->
+      <!--</template>-->
+      <!--<template #default>-->
+        <!--<h2>wowoowo</h2>-->
+      <!--</template>-->
+      <!--<template #footer>-->
+        <!--<h3>;;;;</h3>-->
+      <!--</template>-->
+      <!--&lt;!&ndash;在父组件里使用子组件数据&ndash;&gt;-->
+      <!--<template #siji="slotProps">-->
+        <!--{{ slotProps.user.firstName }}-->
+      <!--</template>-->
+    <!--</Check>-->
+    <!--&lt;!&ndash;<InputTest v-model="sth"></InputTest>&ndash;&gt;-->
+    <!--<InputTest :checked="sth" @input="checkValue"></InputTest>-->
+    <!--<span>{{sth}}</span>-->
+    <!--<SocketVue :msgs="msgs" :foo="foo" @xianshi="showInfo" @update-text="updateText"></SocketVue>-->
+    <!--<Register></Register>-->
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
+  import LoginPw from '@/components/LoginPw';
+  import Check from '@/components/Check';
+  import InputTest from '@/components/InputTest';
+  import SocketVue from '@/components/SocketVue';
+  import Register from '@/components/Register';
   import Per from '../utils/performance/index.js';
-  import Screen from '../utils/h5-screen-orientation.js'
-  import detectOrient from '../utils/detectOrient.js'
   import Api from '../api/index';
-  // import Screen from '../utils/h5-screen-orientation.js'
 export default {
   name: 'HelloWorld',
   data () {
     return {
       mode: "portrait",
       msg: 'Welcome to Your Vue.js App',
-      fileList: [{name: 'food.jpeg', url: 'https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100'}, {name: 'food2.jpeg', url: 'https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100'}],
+      msgs:'haol',
+      foo:'my-aa',
       loading: true,
-      show: false
+      show: false,
+      slotProps:{user:{firstName:'zjje',lastName:'nin'}},
+      user:{
+        name:'shaxu',
+        age:12,
+        email:'952754681@qq.com'
+      },
+      shaxu:'submit',
+      form: {
+        name: '',
+        age: ''
+      },
+      sth:true
     }
   },
-  beforeCreate() {
-
-  },
-  props: {
-
-  },
-  components: {
-
-  },
-  beforeCreate() {
-
-  },
-  created() {
-
-  },
   components:{
-    // Button,
-    // Select
+    LoginPw,
+    Check,
+    InputTest,
+    SocketVue,
+    Register
   },
   mounted() {
-    Per.getPerformanceTiming();
+  Per.getPerformanceTiming();
     // detectOrient();
     // window.addEventListener('resize',detectOrient);
     // 强制竖屏
@@ -95,59 +105,19 @@ export default {
     //   console.log(err);
     // });
 
+  //  this.$refs.Check1.sum();
+    // this.checkValue(this.sth);
   },
   methods:{
-    handleRemove(file, fileList) {
-      console.log(file, fileList);
+    checkValue(checked){
+      //sth = $event.target.checked
+      this.sth = checked
     },
-    handlePreview(file) {
-      console.log(file);
+    showInfo(value){
+      this.msgs = value;
     },
-    handleExceed(files, fileList) {
-      this.$message.warning(`当前限制选择 3 个文件，本次选择了 ${files.length} 个文件，共选择了 ${files.length + fileList.length} 个文件`);
-    },
-    beforeRemove(file, fileList) {
-      return this.$confirm(`确定移除 ${ file.name }？`);
-    },
-    uploadFile() {
-      setTimeout(()=>{
-        Api.uploadFile('/api/upload').then(function (res) {
-          console.log('chengong');
-          console.log(res.data);
-        }).catch(function (err) {
-          console.log(err);
-        });
-      },500)
-    },
-    onBeforeUploadImage (file) {
-      console.log(file)
-    },
-    UploadImage (param) {
-      const formData = new FormData()
-      formData.append('ModelName', param.file) // 要提交给后台的文件
-      formData.append('projectFolder', this.routeProjectId) // 这个接口必要的项目id
-      formData.append('subFolder', this.routeFloorId) // 这个接口必要的其他的id
-      let config = {
-        headers: { 'Content-Type': 'multipart/form-data' }
-      };
-      Api.uploadFile('/api/upload',config).then(function (res) {
-        console.log('chengong');
-        console.log(res.data);
-        param.onSuccess();
-      }).catch(function (err) {
-        console.log(err);
-      });
-      // UploadFiles(formData).then(response => {  // UploadFiles 是封装的接口
-      //   if (response !== undefined) {
-      //     Message({
-      //       message: response.Msg,
-      //       type: 'success',
-      //       duration: 5 * 1000
-      //     })
-      //     param.onSuccess()
-      //     // this.$store.state.basics.ShuxinTable = true
-      //   }
-      // })
+    updateText(value){
+      this.foo = value;
     }
   },
   watch:{
@@ -160,9 +130,11 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
   .hello {
-    width: 150px;
-    height: 64px; /*px*/
+    width: 410px;/*no*/
+    height: 520px; /*no*/
     font-size: 28px; /*px*/
     border: 1px solid #ddd; /*no*/
+    margin: 0 auto;
+    background: skyblue;
   }
 </style>
