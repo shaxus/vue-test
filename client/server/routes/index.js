@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 var upload = require('../src/utils/multer');
 var createToken = require('../middleware/createToken');
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.send('5555');

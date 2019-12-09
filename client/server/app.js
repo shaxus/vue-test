@@ -46,8 +46,8 @@ app.all('*', function(req, res, next) {
     next();
 });
 
+// app.use('/',router);
 app.use('/',router);
-
 // Set up mongoose connection
 // const mongoose = require('mongoose');
 // let dev_db_url = 'mongodb://localhost:27017/movielist/';
