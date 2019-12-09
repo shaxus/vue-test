@@ -13,7 +13,6 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 app.use(cors());
 app.use(logger('dev'));
-<<<<<<< HEAD
 // app.use(express.json());
 //app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
@@ -29,7 +28,6 @@ app.all('*', function(req, res, next) {
 });
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true }));
-=======
 //app.use(express.json());
 //app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
@@ -47,7 +45,6 @@ app.all('*', function(req, res, next) {
     res.header("Access-Control-Allow-Methods","PUT,POST,GET,DELETE,OPTIONS");//预检请求使用
     next();
 });
->>>>>>> 5bafbf54c5c47c5a9ec9206f94b1c26d97cf6dd8
 
 app.use('/',router);
 

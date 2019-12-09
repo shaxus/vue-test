@@ -1,6 +1,5 @@
 ﻿<template>
   <div class="hello">
-<<<<<<< HEAD
   <!--<Input class="" v-loading="loading">-->
     <!--<div v-if="show">-->
         <!--<div>你好</div>-->
@@ -29,7 +28,6 @@
     <!--<SocketVue :msgs="msgs" :foo="foo" @xianshi="showInfo" @update-text="updateText"></SocketVue>-->
     <!--<Register></Register>-->
     <router-view></router-view>
-=======
     <!--<mt-button type="default">default</mt-button>-->
     <!--<mt-button type="primary">primary</mt-button>-->
     <!--<mt-button type="danger">danger</mt-button>-->
@@ -61,7 +59,6 @@
       <!--<div slot="tip" class="el-upload__tip">只能上传<b>apk</b>文件，且文件以“<b>版本号_76</b>”命名<br/>若目标文件已上传过，则此环节可略去</div>-->
     <!--</el-upload>-->
   </div>
->>>>>>> 5bafbf54c5c47c5a9ec9206f94b1c26d97cf6dd8
   </div>
 </template>
 
@@ -72,12 +69,9 @@
   import SocketVue from '@/components/SocketVue';
   import Register from '@/components/Register';
   import Per from '../utils/performance/index.js';
-<<<<<<< HEAD
-=======
   import Screen from '../utils/h5-screen-orientation.js'
   import detectOrient from '../utils/detectOrient.js'
   import {uploadImg} from '../utils/upload/index'
->>>>>>> 5bafbf54c5c47c5a9ec9206f94b1c26d97cf6dd8
   import Api from '../api/index';
 export default {
   name: 'HelloWorld',
@@ -89,7 +83,6 @@ export default {
       foo:'my-aa',
       loading: true,
       show: false,
-<<<<<<< HEAD
       slotProps:{user:{firstName:'zjje',lastName:'nin'}},
       user:{
         name:'shaxu',
@@ -102,9 +95,7 @@ export default {
         age: ''
       },
       sth:true
-=======
       canEdit: true
->>>>>>> 5bafbf54c5c47c5a9ec9206f94b1c26d97cf6dd8
     }
   },
   components:{
@@ -153,11 +144,9 @@ export default {
     // this.checkValue(this.sth);
   },
   methods:{
-<<<<<<< HEAD
     checkValue(checked){
       //sth = $event.target.checked
       this.sth = checked
-=======
   submitUpload(){
 	this.myUpload();
   },
@@ -182,16 +171,13 @@ export default {
           console.log(err);
         });
       },500)
->>>>>>> 5bafbf54c5c47c5a9ec9206f94b1c26d97cf6dd8
     },
     showInfo(value){
       this.msgs = value;
     },
-<<<<<<< HEAD
     updateText(value){
       this.foo = value;
     }
-=======
     myUpload(content) {
     console.log('dddd');
       let form = new FormData();
@@ -271,7 +257,6 @@ export default {
      //        }
     // });
 	// }
->>>>>>> 5bafbf54c5c47c5a9ec9206f94b1c26d97cf6dd8
   },
   watch:{
 

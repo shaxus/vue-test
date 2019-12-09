@@ -26,7 +26,7 @@ instance.interceptors.response.use(function (response) {
   } else {
     if (response.data.code == 401) {
       localStorage.removeItem('jwt');
-      this.$router.push('/Login');
+      this.$router.push('/login');
     }  else {
       throw new Error(res.data.msg);
     }
@@ -67,14 +67,11 @@ export default {
     },
     uploadFile() {
       return new Promise((resolve,reject) => {
-<<<<<<< HEAD
         Vue.axios.post(url).then((response) => {
-=======
         Vue.axios.post('http://localhost:3000/api/upload',{},{ headers: {
             // Accept: "application/json",
             // "Content-Type": "multipart/form-data"
           }}).then((response) => {
->>>>>>> 5bafbf54c5c47c5a9ec9206f94b1c26d97cf6dd8
           resolve(response);
         })
       })
