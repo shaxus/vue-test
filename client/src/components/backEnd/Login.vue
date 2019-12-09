@@ -52,6 +52,8 @@
           },
           resetForm(formName) {
             this.$refs[formName].resetFields();
+            localStorage.removeItem('jwt');
+            this.$store.dispatch('UserLogout');
           }
         }
     }
