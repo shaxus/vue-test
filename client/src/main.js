@@ -10,9 +10,10 @@ import 'mint-ui/lib/style.css'
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 import axios from 'axios'
+import instance from './utils/axios.js'
 import VueAxios from 'vue-axios'
 import store from './store/index.js'
-Vue.use(VueAxios, axios);
+Vue.use(VueAxios, instance);
 // Vue.prototype.$httpd = axios;
 Vue.use(MintUI);
 Vue.use(ElementUI);
