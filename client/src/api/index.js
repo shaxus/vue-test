@@ -1,6 +1,8 @@
 
 import Vue from 'vue'
 import axios from 'axios'
+import store from '../store'
+
 const instance = axios.create();
 // instance.defaults.headers.common['Authorization'] = localStorage.getItem('jwt');
 instance.defaults.headers.post['Content-Type'] = 'application/json';
@@ -12,6 +14,7 @@ instance.interceptors.request.use(function (config) {
   if(localStorage.getItem('jwt')){
     instance.defaults.headers.common['Authorization'] = "Bearer "+localStorage.getItem('jwt').replace(/(^\")|(\"$)/g,'')
   }
+  console.log(config);
   return config;
 }, function (error) {
   // Do something with request error
@@ -22,17 +25,25 @@ instance.interceptors.request.use(function (config) {
 instance.interceptors.response.use(function (response) {
   // Do something with response data
   if (response.data.code == 200) {
+    console.log('eeeee');
     return response;
-  } else {
+  } else  {
     if (response.data.code == 401) {
+      console.log('dddd');
       localStorage.removeItem('jwt');
-      this.$router.push('/login');
-    }  else {
-      throw new Error(res.data.msg);
+      store.dispatch('UserLogout');
+      // this.$router.push('/login');
+    }  else if(response.data.code == 403) {
+
+    } else if(response.data.code == 404){
+
+    } else if(response.data.code == 500){
+
     }
   }
 }, function (error) {
   // Do something with response error
+  console.log('6666');
   return Promise.reject(error);
 });
 
@@ -65,15 +76,28 @@ export default {
         })
       })
     },
-    uploadFile() {
+    uploadFile(){
       return new Promise((resolve,reject) => {
-        Vue.axios.post(url).then((response) => {
-        Vue.axios.post('http://localhost:3000/api/upload',{},{ headers: {
+        Vue.axios.post('http://localhost:3000/api/upload', {}, {
+          headers: {
             // Accept: "application/json",
-            // "Content-Type": "multipart/form-data"
-          }}).then((response) => {
+            "Content-Type": "multipart/form-data"
+          }
+        }).then((response) => {
           resolve(response);
         })
       })
     }
+  //   uploadFile() {
+  //     return new Promise((resolve,reject) => {
+  //       Vue.axios.post('http://localhost:3000/api/upload').then((response) => {
+  //       // Vue.axios.post('http://localhost:3000/api/upload',{},{ headers: {
+  //       //     // Accept: "application/json",
+  //       //     "Content-Type": "multipart/form-data"
+  //       //   }}).then((response) => {
+  //       //   resolve(response);
+  //       // })
+  //     })
+  //   };
+  // }
 }
