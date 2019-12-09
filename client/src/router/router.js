@@ -13,9 +13,7 @@ export default [
     path:'/admin',
     name:'Admin',
     component: Admin,
-    meta: {
-      needLogin: false
-    },
+    meta:{auth:false},
     children: [
 
     ]
@@ -31,6 +29,7 @@ export default [
   {
     path:'/register',
     name:'Register',
-    component:Register
+    component:Register,
+    meta:{auth:false}
   }
 ]
